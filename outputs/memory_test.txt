@@ -1,0 +1,44 @@
+TEST: Memory Test
+================================================================================
+
+Query: What did we discuss about neural networks earlier?
+
+ANSWER:
+----------------------------------------
+Research Findings:
+1. CNN (Convolutional Neural Networks): Specialized for image processing, excels at feature extraction through convolutional layers and pooling.
+2. RNN (Recurrent Neural Networks): Designed for sequential data, maintains memory through hidden states, good for time series and NLP.
+3. GANs (Generative Adversarial Networks): Generative model with adversarial training between generator and discriminator.
+
+
+METADATA:
+----------------------------------------
+Confidence: 77.50%
+Agents Involved: MemoryAgent, ResearchAgent
+Synthesis Method: multi-agent
+
+EXECUTION TRACE:
+----------------------------------------
+Complexity Level: moderate
+Required Agents: ResearchAgent, MemoryAgent
+
+Execution Plan:
+  Step 1: MemoryAgent - retrieve_context
+  Step 2: ResearchAgent - search_knowledge
+  Step 3: MemoryAgent - store_knowledge
+
+Execution Steps:
+  [OK] Step 0: MemoryAgent - store_conversation [completed]
+  [OK] Step 1: MemoryAgent - retrieve_context [completed]
+  [OK] Step 2: ResearchAgent - search_knowledge [completed]
+      - findings_count: 3
+      - confidence: 0.7749999999999999
+  [OK] Step 3: MemoryAgent - store_knowledge [completed]
+
+SYSTEM STATE:
+----------------------------------------
+Total Interactions: 3
+Memory Records: 6
+Topics Covered: neural_networks, transformers, general_ml
+
+================================================================================
