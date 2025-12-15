@@ -1,0 +1,41 @@
+TEST: Collaborative Query
+================================================================================
+
+Query: Compare two machine-learning approaches and recommend which is better for our use case.
+
+ANSWER:
+----------------------------------------
+
+Analysis:
+
+
+METADATA:
+----------------------------------------
+Confidence: 85.00%
+Agents Involved: MemoryAgent, AnalysisAgent
+Synthesis Method: multi-agent
+
+EXECUTION TRACE:
+----------------------------------------
+Complexity Level: complex
+Required Agents: AnalysisAgent, MemoryAgent
+
+Execution Plan:
+  Step 1: MemoryAgent - retrieve_context
+  Step 3: AnalysisAgent - analyze
+  Step 3: MemoryAgent - store_knowledge
+
+Execution Steps:
+  [OK] Step 0: MemoryAgent - store_conversation [completed]
+  [OK] Step 1: MemoryAgent - retrieve_context [completed]
+  [OK] Step 3: AnalysisAgent - analyze [completed]
+      - has_error: True
+  [OK] Step 3: MemoryAgent - store_knowledge [completed]
+
+SYSTEM STATE:
+----------------------------------------
+Total Interactions: 5
+Memory Records: 10
+Topics Covered: neural_networks, ml_approaches, general_ml
+
+================================================================================
