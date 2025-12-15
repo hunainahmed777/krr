@@ -1,0 +1,18 @@
+# Multi-Agent System Requirements
+# Core dependencies for the multi-agent architecture
+
+# No external dependencies required for basic operation
+# The system uses only Python standard library
+
+# Optional: For advanced features (if implemented later)
+# numpy==1.24.0
+# scikit-learn==1.2.0  # For more sophisticated vector operations
+# chroma-db==0.3.0     # For persistent vector storage
+# fastapi==0.95.0      # For REST API service
+# uvicorn==0.21.0      # ASGI server
+
+# Development dependencies
+pytest==7.2.0
+pytest-cov==4.0.0
+black==23.1.0
+flake8==6.0.0
