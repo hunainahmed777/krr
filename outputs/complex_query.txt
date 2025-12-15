@@ -1,0 +1,48 @@
+TEST: Complex Query
+================================================================================
+
+Query: Research transformer architectures, analyze their computational efficiency, and summarize key trade-offs.
+
+ANSWER:
+----------------------------------------
+Research Findings:
+1. BERT (Bidirectional Encoder Representations from Transformers): Bidirectional pre-training, excellent for understanding context.
+2. GPT (Generative Pre-trained Transformers): Unidirectional decoder, excellent for text generation tasks.
+3. Vision Transformers (ViT): Apply transformer architecture to image classification by treating images as sequences of patches.
+
+Analysis:
+Summary: Analysis of 3 options reveals distinct trade-offs. Each option excels in specific dimensions while having limitations in others. Choose based on priority and constraints.
+
+
+METADATA:
+----------------------------------------
+Confidence: 83.75%
+Agents Involved: ResearchAgent, AnalysisAgent, MemoryAgent
+Synthesis Method: multi-agent
+
+EXECUTION TRACE:
+----------------------------------------
+Complexity Level: complex
+Required Agents: ResearchAgent, AnalysisAgent
+
+Execution Plan:
+  Step 2: ResearchAgent - search_knowledge
+  Step 3: AnalysisAgent - analyze
+  Step 3: MemoryAgent - store_knowledge
+
+Execution Steps:
+  [OK] Step 0: MemoryAgent - store_conversation [completed]
+  [OK] Step 2: ResearchAgent - search_knowledge [completed]
+      - findings_count: 5
+      - confidence: 0.875
+  [OK] Step 3: AnalysisAgent - analyze [completed]
+      - confidence: 0.8
+  [OK] Step 3: MemoryAgent - store_knowledge [completed]
+
+SYSTEM STATE:
+----------------------------------------
+Total Interactions: 2
+Memory Records: 4
+Topics Covered: neural_networks, transformers, general_ml
+
+================================================================================
