@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  multi-agent-system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: multi-agent-system
+    
+    # Environment setup
+    environment:
+      PYTHONUNBUFFERED: 1
+      PYTHONPATH: /app
+    
+    # Volume mounts for persistence
+    volumes:
+      - ./multi_agent_system:/app/multi_agent_system
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    
+    # Run the test suite
+    command: python multi_agent_system/test_runner.py
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 512M
+        reservations:
+          cpus: '1'
+          memory: 256M
+
+  # Alternative service for interactive CLI
+  # Uncomment to enable
+  # multi-agent-cli:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: multi-agent-cli
+  #   environment:
+  #     PYTHONUNBUFFERED: 1
+  #     PYTHONPATH: /app
+  #   volumes:
+  #     - ./multi_agent_system:/app/multi_agent_system
+  #     - ./outputs:/app/outputs
+  #   command: python multi_agent_system/cli.py
+  #   stdin_open: true
+  #   tty: true
+
+networks:
+  default:
+    name: multi-agent-network
