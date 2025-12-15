@@ -1,0 +1,42 @@
+TEST: Simple Query
+================================================================================
+
+Query: What are the main types of neural networks?
+
+ANSWER:
+----------------------------------------
+Research Findings:
+1. CNN (Convolutional Neural Networks): Specialized for image processing, excels at feature extraction through convolutional layers and pooling.
+2. RNN (Recurrent Neural Networks): Designed for sequential data, maintains memory through hidden states, good for time series and NLP.
+3. Transformers: State-of-the-art for NLP, uses self-attention mechanism, parallelizable, excellent for large-scale language models.
+
+
+METADATA:
+----------------------------------------
+Confidence: 77.50%
+Agents Involved: ResearchAgent, MemoryAgent
+Synthesis Method: multi-agent
+
+EXECUTION TRACE:
+----------------------------------------
+Complexity Level: simple
+Required Agents: ResearchAgent
+
+Execution Plan:
+  Step 2: ResearchAgent - search_knowledge
+  Step 2: MemoryAgent - store_knowledge
+
+Execution Steps:
+  [OK] Step 0: MemoryAgent - store_conversation [completed]
+  [OK] Step 2: ResearchAgent - search_knowledge [completed]
+      - findings_count: 3
+      - confidence: 0.7749999999999999
+  [OK] Step 2: MemoryAgent - store_knowledge [completed]
+
+SYSTEM STATE:
+----------------------------------------
+Total Interactions: 1
+Memory Records: 2
+Topics Covered: neural_networks, general_ml
+
+================================================================================
